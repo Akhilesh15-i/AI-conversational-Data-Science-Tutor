@@ -8,13 +8,13 @@ from io import BytesIO
 
 # Load API Key
 load_dotenv()
-api_key = os.getenv("AIzaSyBC6Wu8EImL_6HNDLIcXv5yGhfoTirsz5A")
+api_key = os.getenv("API_Key")
 
 # Streamlit Page Config
 st.set_page_config(page_title="AI Data Science Tutor", page_icon="🧠", layout="wide")
 
 # Initialize Chat Model
-chat_model = ChatGoogleGenerativeAI(model="gemini-1.5-pro", temperature=0.7, google_api_key="AIzaSyBC6Wu8EImL_6HNDLIcXv5yGhfoTirsz5A")
+chat_model = ChatGoogleGenerativeAI(model="gemini-1.5-pro", temperature=0.7, google_api_key="API_Key")
 
 # Initialize Memory
 if "memory" not in st.session_state:
